@@ -8,27 +8,33 @@ def select_mars():
 	global mars, select
 	select = mars
 
+def printCoord(name, x, y):
+	if name == terre:
+		msg.configure(text='Coordonnees de la planete terre: ['+str(x)+';'+str(y)+']')
+	else:
+		msg.configure(text='Coordonnees de la planete mars: ['+str(x)+';'+str(y)+']')
+
 def teleport(event):
 	global select, tx, ty, tr, mx, my, mr
 	if select == terre:
 		tx, ty = event.x, event.y
 		can1.coords(select, event.x-tr, event.y-tr, event.x+tr, event.y+tr)
-		msg.configure(text='Coordonnees de la planete terre: ['+str(tx)+';'+str(ty)+']')
+		printCoord(terre, tx, ty)
 	else:
 		mx, my = event.x, event.y
 		can1.coords(select, event.x-mr, event.y-mr, event.x+mr, event.y+mr)
-		msg.configure(text='Coordonnees de la planete mars: ['+str(mx)+';'+str(my)+']')
+		printCoord(mars, mx, my)
 
 def move(rl, ud):
 	global select, tx, ty, tr, mx, my, mr
 	if select == terre:
 		tx, ty = tx+rl, ty+ud
 		can1.coords(select, tx-tr, ty-tr, tx+tr, ty+tr)
-		msg.configure(text='Coordonnees de la planete terre: ['+str(tx)+';'+str(ty)+']')	
+		printCoord(terre, tx, ty)
 	else:
 		mx, my = mx+rl, my+ud
 		can1.coords(select, mx-mr, my-mr, mx+mr, my+mr)
-		msg.configure(text='Coordonnees de la planete mars: ['+str(mx)+';'+str(my)+']')
+		printCoord(mars, mx, my)
 
 def move_up():
 	move(0, -10)
