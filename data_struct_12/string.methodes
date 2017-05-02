@@ -1,0 +1,40 @@
+'string'.split():
+	convertit une chaîne en une liste de sous-chaînes.
+	On peut choisir le caractère séparateur en le fournissant
+	comme argument, sinon c'est un espace par défau
+
+'sep'.join(liste):
+	inverse de .split() 
+
+'string'.find(sch):
+	cherche la position d'une sous-chaîne sch dans la chaîne string
+
+'string'.count(sch):
+	compte le nombre de sous-chaînes sch dans la chaîne string
+
+'string'.lower():
+	convertit 'string' en minuscule
+
+'string'.upper():
+	convertit 'string' en majuscule
+
+'string'.title():
+	convertit en majuscule l'initiale de chaque mot
+
+'string'.capitalize():
+	convertit la premiere lettre de 'string' en majuscule
+
+'string'.swapcase():
+	convertit majuscules en minuscules et vice versa
+
+'string'.strip():
+	retire les espaces en debut et fin de 'string'
+
+'string'.replace(c1, c2):
+	remplace tous les characteres c1 par c2 dans 'string'
+
+'string'.index(char):
+	renvoie l' index de la premiere occurence du charactere 'char' dans 'string'
+
+
+!!!! la plupart des fonctions prennent (beg=, end=) comme options

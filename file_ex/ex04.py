@@ -1,3 +1,5 @@
+#Écrivez un script qui recopie un fichier texte en triplant tous les espaces entre les mots
+
 sfile = input("source file name: ")
 dfile = input("dest file name: ")
 try:

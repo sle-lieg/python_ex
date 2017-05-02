@@ -3,12 +3,11 @@ from math import *
 
 def moving_snake():
 	global snake_l, cote, width
-	x = 0
-	for (snake_l[x]) in snake_l:
-		snake_l[x][1] = snake_l[x][1] + (cote)
-		can1.coords(snake_l[x][0], snake_l[x][1], snake_l[x][2], snake_l[x][1]+cote, snake_l[x][2]+cote)
-		if snake_l[x][1] >= width:
-			snake_l[x][1] = 0
+	for elem in snake_l:
+		elem[1] = elem[1] + cote
+		can1.coords(elem[0], elem[1], elem[2], elem[1]+cote, elem[2]+cote)
+		if elem[1] >= width:
+			elem[1] = 0
 	fen1.after(100, moving_snake)
 
 def draw_snake():

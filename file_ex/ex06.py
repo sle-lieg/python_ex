@@ -1,3 +1,4 @@
+# Écrivez un script qui compare les contenus de deux fichiers et signale la première différence rencontrée
 
 def find_diff():
 	global line1, line2
